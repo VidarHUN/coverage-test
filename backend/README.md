@@ -19,4 +19,9 @@ It will listen on `localhost:9000`.
 curl http://localhost:9000/counter
 ```
 
-It should return with a simple JSON: `{counter: 1}`. If you make a new call, the counter value must increase by one.
+It should return with a simple JSON: `{counter: 1}`. If you make a 
+new call, the counter value must increase by one.
+
+### TODO
+
+- Add a Dockerfile 
