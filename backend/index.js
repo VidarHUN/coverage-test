@@ -18,5 +18,4 @@ api.init();
 app.use((req, res) => api.handleRequest(req, req, res));
 
 var server = app.listen(9000, () => console.info('api listening at http://localhost:9000'));
-server.close();
 module.exports.server = server;
