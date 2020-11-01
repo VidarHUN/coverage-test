@@ -14,3 +14,4 @@ Simple Angular + Node.js webapp with some kind of database.
 - Add auto publish to docker images
 - Write some deployments 
 - Find out, how to make GCP patterns 
+- Make a database to the backend
