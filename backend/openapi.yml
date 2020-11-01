@@ -1,0 +1,29 @@
+openapi: 3.0.0
+
+info:
+    version: 1.0.0
+    title: Counter
+    description: Get a simple number
+
+servers:
+    - url: '/devops'
+
+paths:
+  /counter: 
+    get: 
+      operationId: 'getCounter'
+      responses: 
+        '200': 
+           description: 'Users were obtained'
+           content: 
+             'application/json': 
+               schema: 
+                 $ref: '#/components/schemas/counter'
+
+components: 
+  schemas: 
+    counter: 
+      type: 'integer'
+      description: 'Return with a number'
+      example: 1
+
