@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/VidarHUN/DevOps-hf.svg?branch=master)](https://travis-ci.org/VidarHUN/DevOps-hf)
+[![Coverage Status](https://coveralls.io/repos/github/VidarHUN/DevOps-hf/badge.svg?branch=master)](https://coveralls.io/github/VidarHUN/DevOps-hf?branch=master)
+
 # DevOps-hf
 
 Simple Angular + Node.js webapp with some kind of database. 
