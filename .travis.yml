@@ -1,3 +1,7 @@
 language: node_js
 node_js:
     - "14"
+env:
+    - DIR=backend
+
+script: cd $DIR && npm run test:coveralls
