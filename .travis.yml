@@ -4,4 +4,4 @@ node_js:
 env:
     - DIR=backend
 
-script: cd $DIR && npm run test:coveralls
+script: cd $DIR && npm i && npm run test:coveralls
