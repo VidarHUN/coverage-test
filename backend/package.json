@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/VidarHUN/DevOps-hf#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "openapi-backend": "^3.6.3"
   },
