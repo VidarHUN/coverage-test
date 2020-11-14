@@ -1,5 +1,21 @@
 language: node_js
+
 node_js:
     - "14"
+    
+services:
+    - docker
 
-script: npm i && npm run test:coveralls
+jobs:
+    include:
+        - stage: npm build and test
+          script: npm i && npm run test:coveralls
+        - stage: build docker image
+          script:
+            - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+            - docker build -t devops-hf-backend .
+            - docker images
+            - docker tag devops-hf-backend $DOCKER_USERNAME/devops-hf-backend
+            - docker push $DOCKER_USERNAME/devops-hf-backend
+        - stage: docker test
+          script: docker run --rm $DOCKER_USERNAME/devops-hf-backend
