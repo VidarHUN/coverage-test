@@ -25,7 +25,4 @@ jobs:
         - stage: build helm
           script:
             - sudo apt-get -y -qq install sshpass
-            - sshpass -p $CLUSTER_PASSWORD ssh -o StrictHostKeyChecking=no cloud@vm.smallville.cloud.bme.hu -p $CLUSTER_PORT
-            - echo $(ip a)
-            - helm upgrade --install counter-backend DevOps-hf-helm/charts/counter-backend
-            - exit 
+            - sshpass -p $CLUSTER_PASSWORD ssh -o StrictHostKeyChecking=no cloud@vm.smallville.cloud.bme.hu -p $CLUSTER_PORT helm upgrade --install counter-backend DevOps-hf-helm/charts/counter-backend
