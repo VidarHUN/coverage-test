@@ -24,6 +24,7 @@ jobs:
             - docker push $DOCKER_USERNAME/devops-hf-backend
         - stage: build helm
           script:
+            - sudo apt-get -y -qq install sshpass
             - sshpass -p $CLUSTER_PASSWORD ssh -o StrictHostKeyChecking=no cloud@vm.smallville.cloud.bme.hu -p $CLUSTER_PORT
             - helm upgrade --install counter-backend DevOps-hf-helm/charts/counter-backend
             - exit 
