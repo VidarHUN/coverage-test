@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc npm test",
-    "test:coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "test": "mocha",
+    "coverage": "nyc --reporter=lcov npm test",
+    "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
